@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/tlSettings"
+    android:padding="@dimen/fragment_table_cell_padding"
+    android:stretchColumns="1">
+
+    <TableRow>
+        <TextView
+            android:padding="@dimen/fragment_table_cell_padding"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/begin_date"
+            android:id="@+id/tvBeginDate"
+            android:layout_gravity="center_vertical" />
+
+        <RelativeLayout
+            android:padding="@dimen/fragment_table_cell_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/not_set"
+                android:id="@+id/tvBeginDateValue"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_alignParentTop="true"
+                android:layout_alignBottom="@+id/ivRemoveBeginDate"
+                android:layout_toLeftOf="@+id/ivRemoveBeginDate"
+                android:layout_toStartOf="@+id/ivRemoveBeginDate"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:gravity="center_vertical" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:id="@+id/ivRemoveBeginDate"
+                android:contentDescription="@string/remove_date"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:padding="@dimen/fragment_table_cell_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sort"
+            android:id="@+id/tvSort"
+            android:layout_gravity="center_vertical" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spSort"
+            android:spinnerMode="dropdown"
+            android:layout_gravity="center_vertical" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:padding="@dimen/fragment_table_cell_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/news_desk"
+            android:id="@+id/tvNewsDesk"
+            android:layout_gravity="center_vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/arts"
+                android:id="@+id/cbNewsDeskArts"
+                android:checked="false" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fashion_style"
+                android:id="@+id/cbNewsDeskFashionStyle"
+                android:checked="false" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sports"
+                android:id="@+id/cbNewsDeskSports"
+                android:checked="false" />
+        </LinearLayout>
+    </TableRow>
+</TableLayout>
